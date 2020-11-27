@@ -8,14 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/style.css">
     </head>
-    <body onload="aktualisiere()">
+    <body onload="reset()">
         <div class="container">
             <div class="punkteliste">
                 <h2>Punkteliste</h2>
-                <p>Julian</p> <p id="jPunkte"></p> <input type="number" id="julian"> <button onclick="addJulian()">Aktualisieren</button>     
-                <p>Hannah</p> <p id="hPunkte"></p> <input type="number" id="hannah"> <button onclick="addHannah()">Aktualisieren</button>     
-                <p>Lea</p> <p id="lPunkte"></p> <input type="number" id="lea"> <button onclick="addLea()">Aktualisieren</button>     
-                <p>Paul</p> <p id="pPunkte"></p> <input type="number" id="paul"> <button onclick="addPaul()">Aktualisieren</button>     
+                <p>Julian</p> <p id="julianP"></p> <input type="number" id="julian">    
+                <p>Hannah</p> <p id="hannahP"></p> <input type="number" id="hannah">  
+                <p>Lea</p> <p id="leaP"></p> <input type="number" id="lea">  
+                <p>Paul</p> <p id="paulP"></p> <input type="number" id="paul">   
+                <button onclick="add()">Add Points</button>
+                <div class="regeln">
+                    <h2>Spielregeln</h2>
+                    <ol>
+                        <li>Regel</li>
+                        <li>Regel</li>
+                        <li>Regel</li>
+                    </ol>
+                </div>
             </div>
             <div class="rangliste">
                 <h2>Rangliste</h2>
