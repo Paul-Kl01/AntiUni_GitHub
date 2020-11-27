@@ -1,0 +1,16 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "punkteliste rangliste";
+}
+
+.container .punkteliste {
+    grid-area: punkteliste;
+}
+
+.container .rangliste {
+    grid-area: rangliste;
+}
+

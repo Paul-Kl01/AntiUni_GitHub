@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body onload="aktualisiere()">
+        <div class="container">
+            <div class="punkteliste">
+                <h2>Punkteliste</h2>
+                <p>Julian</p> <p id="jPunkte"></p> <input type="number" id="julian"> <button onclick="addJulian()">Aktualisieren</button>     
+                <p>Hannah</p> <p id="hPunkte"></p> <input type="number" id="hannah"> <button onclick="addHannah()">Aktualisieren</button>     
+                <p>Lea</p> <p id="lPunkte"></p> <input type="number" id="lea"> <button onclick="addLea()">Aktualisieren</button>     
+                <p>Paul</p> <p id="pPunkte"></p> <input type="number" id="paul"> <button onclick="addPaul()">Aktualisieren</button>     
+            </div>
+            <div class="rangliste">
+                <h2>Rangliste</h2>
+                <ol id="rangliste"></ol>
+            </div>
+        </div>
+        <script src="/app.js"></script>
+    </body>
+</html>
