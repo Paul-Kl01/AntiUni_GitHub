@@ -10,7 +10,8 @@
     </head>
     <body onload="reset()">
         <div class="container">
-            <div class="punkteliste">
+            <div id="punkteliste">
+                <input type="text" id="user"><button onclick="addUser()">Add User</button>
                 <h2>Punkteliste</h2>
                 <p>Julian</p> <p id="julianP"></p> <input type="number" id="julian">    
                 <p>Hannah</p> <p id="hannahP"></p> <input type="number" id="hannah">  
@@ -18,7 +19,7 @@
                 <p>Paul</p> <p id="paulP"></p> <input type="number" id="paul">   
                 <button onclick="add()">Add Points</button>
                 <div class="regeln">
-                    <h2>Spielregeln</h2>
+                    <h2>Spielregeln / Punkte</h2>
                     <ol>
                         <li>Regel</li>
                         <li>Regel</li>

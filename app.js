@@ -1,8 +1,16 @@
+/*
+ToDo:
+1. Nutzer erstellen -> addScore() anpassen für dynamische Nutzer
+2. Rangliste ausgeben, sortieren
+*/
+
 // Personen Klasse
 class Person {
     constructor(name, score) {
         this.name = name;
         this.score = score;
+
+        //Nuzter Ausgabe??
     }
 
     getPunkte() {
@@ -23,6 +31,21 @@ class Person {
             console.log(this.getName(),":", punkte);
         }
     }
+
+    addUser() {
+        /*let user = document.getElementById("user").value;
+        user = new Person(user, 0);
+        user.name = document.getElementById("user").value;
+        user.score = 0;
+        console.log(user);
+        document.getElementById("user").value = "";*/
+
+        // Nutzer ausgeben
+        document.getElementById("punkteliste").innerHTML +=
+        `<p> ${this.name} ( ${this.score} ) </p> <input type="number" id="${this.name}">`;
+    }
+
+    sort(){}
 }
 
 // Nutzer erstellen
@@ -30,6 +53,16 @@ let jul = new Person("julian", 0);
 let han = new Person("hannah", 0);
 let lea = new Person("lea", 0);
 let pau = new Person("paul", 0);
+
+function addUser() {
+    let user = document.getElementById("user").value;
+    user = new Person(user, 0);
+    user.name = document.getElementById("user").value;
+    user.score = 0;
+    console.log(user);
+    user.addUser();
+    document.getElementById("user").value = "";
+}
 
 // Punkte hinzufügen
 function add() {
@@ -52,11 +85,3 @@ function reset() {
     document.getElementById("paulP").innerHTML = pau.getPunkte();
 }
 
-// Rangliste sortieren
-/*
-let rangliste = [jul.score];
-console.log(rangliste);
-function sort() {
-
-}
-*/

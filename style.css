@@ -6,7 +6,7 @@
     grid-template-areas: "punkteliste rangliste";
 }
 
-.container .punkteliste {
+.container #punkteliste {
     grid-area: punkteliste;
 }
 
