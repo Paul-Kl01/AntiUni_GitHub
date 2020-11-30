@@ -4,6 +4,8 @@ ToDo:
 2. Rangliste ausgeben, sortieren
 */
 
+// AddUser bearbeitet
+
 // Personen Klasse
 class Person {
     constructor(name, score) {
