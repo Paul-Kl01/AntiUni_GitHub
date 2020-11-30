@@ -14,7 +14,7 @@
 <body onload="reset()">
     <div class="container">
         <div id="punkteliste">
-            <input type="text" id="user"><button onclick="addUser()">Add User</button>
+            <input type="text" id="user"><button onclick="createUser()">Add User</button>
             <h2>Punkteliste</h2>
             <p>Julian</p>
             <p id="julianP"></p> <input type="number" id="julian">
@@ -36,7 +36,8 @@
         </div>
         <div class="rangliste">
             <h2>Rangliste</h2>
-            <ol id="rangliste"></ol>
+            <ol id="rangliste">
+            </ol>
         </div>
     </div>
     <script src="/app.js"></script>

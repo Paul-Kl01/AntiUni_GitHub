@@ -4,8 +4,6 @@ ToDo:
 2. Rangliste ausgeben, sortieren
 */
 
-// AddUser bearbeitet
-
 // Personen Klasse
 class Person {
     constructor(name, score) {
@@ -45,7 +43,7 @@ class Person {
         // Nutzer ausgeben
         document.getElementById("punkteliste").innerHTML +=
         `<p> ${this.name} ( ${this.score} ) </p> <input type="number" id="${this.name}">`;
-    }
+    } 
 
     sort(){}
 }
@@ -56,7 +54,7 @@ let han = new Person("hannah", 0);
 let lea = new Person("lea", 0);
 let pau = new Person("paul", 0);
 
-function addUser() {
+function createUser() {
     let user = document.getElementById("user").value;
     user = new Person(user, 0);
     user.name = document.getElementById("user").value;
@@ -66,17 +64,39 @@ function addUser() {
     document.getElementById("user").value = "";
 }
 
+// Rangliste sortieren
+function sort() {
+    let user = [jul, han, lea, pau];
+    let list = document.getElementById("rangliste");
+    list.innerHTML = "";
+    for (let i = 0; i < user.length; i++) {
+        for (let j = 0; j < user.length - i - 1; j++) {
+            if (user[j].getPunkte() > user[j+1].getPunkte()) {
+                let temp = user[j];
+                user[j] = user[j+1];
+                user[j + 1] = temp;
+            }
+        }
+    }
+    for (let k = user.length - 1; k >= 0; k--) {
+        document.getElementById("rangliste").innerHTML +=
+        `<li>${user[k].getName()} ( ${user[k].getPunkte()} )</li>`;
+    }
+}
+
 // Punkte hinzufügen
 function add() {
     if (document.getElementById("julian").value != "") {
         jul.addScore();
-    } else if (document.getElementById("hannah").value != "") {
+    } if (document.getElementById("hannah").value != "") {
         han.addScore();
-    } else if (document.getElementById("lea").value != "") {
+    } if (document.getElementById("lea").value != "") {
         lea.addScore();
-    } else {
+    } if (document.getElementById("paul").value != "") {
         pau.addScore();
     }
+    
+    sort();
 }
 
 // Punkte reset
@@ -86,4 +106,3 @@ function reset() {
     document.getElementById("leaP").innerHTML = lea.getPunkte();
     document.getElementById("paulP").innerHTML = pau.getPunkte();
 }
-
