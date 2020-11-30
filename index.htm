@@ -1,37 +1,45 @@
 <!DOCTYPE html>
+<!--Test-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style.css">
-    </head>
-    <body onload="reset()">
-        <div class="container">
-            <div id="punkteliste">
-                <input type="text" id="user"><button onclick="addUser()">Add User</button>
-                <h2>Punkteliste</h2>
-                <p>Julian</p> <p id="julianP"></p> <input type="number" id="julian">    
-                <p>Hannah</p> <p id="hannahP"></p> <input type="number" id="hannah">  
-                <p>Lea</p> <p id="leaP"></p> <input type="number" id="lea">  
-                <p>Paul</p> <p id="paulP"></p> <input type="number" id="paul">   
-                <button onclick="add()">Add Points</button>
-                <div class="regeln">
-                    <h2>Spielregeln / Punkte</h2>
-                    <ol>
-                        <li>Regel</li>
-                        <li>Regel</li>
-                        <li>Regel</li>
-                    </ol>
-                </div>
-            </div>
-            <div class="rangliste">
-                <h2>Rangliste</h2>
-                <ol id="rangliste"></ol>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body onload="reset()">
+    <div class="container">
+        <div id="punkteliste">
+            <input type="text" id="user"><button onclick="addUser()">Add User</button>
+            <h2>Punkteliste</h2>
+            <p>Julian</p>
+            <p id="julianP"></p> <input type="number" id="julian">
+            <p>Hannah</p>
+            <p id="hannahP"></p> <input type="number" id="hannah">
+            <p>Lea</p>
+            <p id="leaP"></p> <input type="number" id="lea">
+            <p>Paul</p>
+            <p id="paulP"></p> <input type="number" id="paul">
+            <button onclick="add()">Add Points</button>
+            <div class="regeln">
+                <h2>Spielregeln / Punkte</h2>
+                <ol>
+                    <li>Regel</li>
+                    <li>Regel</li>
+                    <li>Regel</li>
+                </ol>
             </div>
         </div>
-        <script src="/app.js"></script>
-    </body>
+        <div class="rangliste">
+            <h2>Rangliste</h2>
+            <ol id="rangliste"></ol>
+        </div>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
 </html>
