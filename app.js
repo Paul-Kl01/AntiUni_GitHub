@@ -1,9 +1,3 @@
-/*
-ToDo:
-1. Nutzer erstellen -> addScore() anpassen für dynamische Nutzer
-2. Rangliste ausgeben, sortieren
-*/
-
 // Personen Klasse
 class Person {
     constructor(name, score) {
@@ -53,6 +47,7 @@ let jul = new Person("julian", 0);
 let han = new Person("hannah", 0);
 let lea = new Person("lea", 0);
 let pau = new Person("paul", 0);
+let ann = new Person("anni", 0);
 
 function createUser() {
     let user = document.getElementById("user").value;
@@ -66,7 +61,7 @@ function createUser() {
 
 // Rangliste sortieren
 function sort() {
-    let user = [jul, han, lea, pau];
+    let user = [jul, han, lea, pau, ann];
     let list = document.getElementById("rangliste");
     list.innerHTML = "";
     for (let i = 0; i < user.length; i++) {
@@ -94,6 +89,8 @@ function add() {
         lea.addScore();
     } if (document.getElementById("paul").value != "") {
         pau.addScore();
+    } if (document.getElementById("anni").value != "") {
+        ann.addScore();
     }
     
     sort();
@@ -105,4 +102,5 @@ function reset() {
     document.getElementById("hannahP").innerHTML = han.getPunkte();
     document.getElementById("leaP").innerHTML = lea.getPunkte();
     document.getElementById("paulP").innerHTML = pau.getPunkte();
+    document.getElementById("anniP").innerHTML = pau.getPunkte();
 }
